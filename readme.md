@@ -2,7 +2,7 @@
 client_credentials works
 
 ## example program
-```
+```julia
 client = OAuth2Client.Client("https://api.intra.42.fr",
     "user_id", "user_secret", nothing) |> OAuth2Client.gettoken
 
