@@ -1,0 +1,9 @@
+name = "OAuth2Client"
+uuid = "0323fb88-2d26-438f-885a-727e08719c79"
+authors = ["Aren R Windham <windham.aren@protonmail.com>"]
+version = "0.1.0"
+
+[deps]
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
