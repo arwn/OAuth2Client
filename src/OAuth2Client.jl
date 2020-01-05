@@ -9,7 +9,7 @@ mutable struct Client
     id::String
     secret::String
     token::Union{Nothing, String}
-    cooldown::Dates.Second
+    cooldown::Dates.Millisecond
     lastcall::Dates.DateTime
 end
 
