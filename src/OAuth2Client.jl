@@ -14,7 +14,8 @@ mutable struct Client
 end
 
 Client(host::String, id::String,
-        secret::String; cooldown::Dates.Second=Dates.Second(0)) =
+        secret::String; 
+        cooldown::Dates.Millisecond=Dates.Millisecond(0)) =
     Client(host, id, secret, nothing, cooldown, Dates.DateTime(1))
 
 # handles api rate limits
