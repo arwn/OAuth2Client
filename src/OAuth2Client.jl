@@ -23,7 +23,7 @@ function _delay!(c::Client)
     if c.cooldown == 0 return end
     now = Dates.now()
     diff = now - c.lastcall
-    if diff < Dates.Second(c.cooldown)
+    if diff < c.cooldown
         sleep((c.cooldown - diff).periods[1])
     end
     c.lastcall = Dates.now()
@@ -31,7 +31,6 @@ end
 
 # Gets a token using the 'Client Credentials' flow
 function gettoken(c::Client)
-    _delay!(c)
     req = HTTP.request(:POST, c.host * "/oauth/token", [],
         "grant_type=client_credentials&" *
         "client_id=$(c.id)&" *
